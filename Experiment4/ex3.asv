@@ -1,0 +1,13 @@
+clc();
+clear all();
+
+fs = 1000; 
+t = 0 : 1/ fs :1; 
+f = 100; 
+
+x = sin(2*pi * f * t);
+plot(t,x,'r', 'LineWidth', 2); 
+
+
+ricianchan = comm.RicianChannel(); 
+
