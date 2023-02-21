@@ -33,6 +33,7 @@ dataSymbolsOutG = qamdemod(receivedSignalG,M);     % Gray-coded data symbols
 dataOut = int2bit(dataSymbolsOut,k);
 dataOutG = int2bit(dataSymbolsOutG,k);
 [numErrors,ber] = biterr(dataIn,dataOut);
+
 fprintf('\nThe binary coding bit error rate is %5.2e, based on %d errors.\n', ...
     ber,numErrors)
 [numErrorsG,berG] = biterr(dataIn,dataOutG);
